@@ -62,18 +62,58 @@
 		BA23F23E236FC997001AD26C /* iTunes Search */ = {
 			isa = PBXGroup;
 			children = (
+				BA23F25F23727337001AD26C /* Storyboard */,
+				BA23F25B237272D9001AD26C /* View Controller */,
+				BA23F25C237272F2001AD26C /* Models */,
+				BA23F25D23727301001AD26C /* Model Controller */,
+				BA23F25E23727320001AD26C /* Resources */,
+			);
+			path = "iTunes Search";
+			sourceTree = "<group>";
+		};
+		BA23F25B237272D9001AD26C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F25923724DC9001AD26C /* SearchResultsTableViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		BA23F25C237272F2001AD26C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F253237236D9001AD26C /* SearchResult.swift */,
+				BA23F25523723905001AD26C /* ResultType.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BA23F25D23727301001AD26C /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F25723723AED001AD26C /* SearchResultController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		BA23F25E23727320001AD26C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BA23F23F236FC997001AD26C /* AppDelegate.swift */,
 				BA23F241236FC997001AD26C /* SceneDelegate.swift */,
-				BA23F245236FC997001AD26C /* Main.storyboard */,
-				BA23F25923724DC9001AD26C /* SearchResultsTableViewController.swift */,
 				BA23F248236FC998001AD26C /* Assets.xcassets */,
 				BA23F24A236FC998001AD26C /* LaunchScreen.storyboard */,
 				BA23F24D236FC998001AD26C /* Info.plist */,
-				BA23F253237236D9001AD26C /* SearchResult.swift */,
-				BA23F25523723905001AD26C /* ResultType.swift */,
-				BA23F25723723AED001AD26C /* SearchResultController.swift */,
 			);
-			path = "iTunes Search";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BA23F25F23727337001AD26C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F245236FC997001AD26C /* Main.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

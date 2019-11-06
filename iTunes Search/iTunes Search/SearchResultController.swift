@@ -15,51 +15,51 @@ enum HTTPMethod: String {
 }
 
 class SearchResultController {
+    
+    // MARK: - Properties
     let baseURL = URL(string: "https://itunes.apple.com/search")!
     
     var searchResults: [SearchResult] = []
     
+    // MARK: - Methods
     func performSearch(searchTerm: String, resultType: ResultType, completion: @escaping () -> Void) {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         let searchTermQueryItem = URLQueryItem(name: "term", value: searchTerm)
         let resultTypeQueryItem = URLQueryItem(name: "entity", value: resultType.rawValue)
         urlComponents?.queryItems = [searchTermQueryItem, resultTypeQueryItem]
         
-        
         guard let requestURL = urlComponents?.url else {
             print("Request URL is nil")
             completion()
             return
         }
-    
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = "GET"
         // print(request.url)
         URLSession.shared.dataTask(with: request) { data, _, error in
-        if let error = error {
-            print("Error fetching data: \(error)")
-            completion()
-            return
-        }
-        guard let data = data else {
-            print("No data returned from data task.")
-            completion()
-            return
-        }
-        
-        let jsonDecoder = JSONDecoder ()
-        //jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-        
-        do {
-            let performSearch = try jsonDecoder.decode(SearchResults.self, from: data)
-            self.searchResults = performSearch.results
+            if let error = error {
+                print("Error fetching data: \(error)")
+                completion()
+                return
+            }
+            guard let data = data else {
+                print("No data returned from data task.")
+                completion()
+                return
+            }
             
-        } catch {
-            print("Unable to decode data into object of type \(ResultType.self): \(error)")
-        }
-        completion()
+            let jsonDecoder = JSONDecoder ()
             
-    }.resume()
-}
+            do {
+                let performSearch = try jsonDecoder.decode(SearchResults.self, from: data)
+                self.searchResults = performSearch.results
+                
+            } catch {
+                print("Unable to decode data into object of type \(ResultType.self): \(error)")
+            }
+            completion()
+            
+        }.resume()
+    }
 }
