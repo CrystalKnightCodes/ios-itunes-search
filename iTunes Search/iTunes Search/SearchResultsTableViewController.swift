@@ -14,13 +14,13 @@ class SearchResultsTableViewController: UITableViewController {
     @IBOutlet weak var resultTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
-    
+    // MARK: - Properties
+    let searchResultsController = SearchResultController()
     
     // MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchBar.delegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,25 +30,23 @@ class SearchResultsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return searchResultsController.searchResults.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath)
 
         // Configure the cell...
-
+        let searchResult = searchResultsController.searchResults[indexPath.row]
+        cell.detailTextLabel?.text = searchResult.creator
+        cell.textLabel?.text = searchResult.title
+    
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -95,4 +93,28 @@ class SearchResultsTableViewController: UITableViewController {
     }
     */
 
+}
+extension SearchResultsTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text else { return }
+            var resultType: ResultType!
+                switch resultTypeSegmentedControl.selectedSegmentIndex {
+                case 0:
+                    resultType = .software
+                case 1:
+                    resultType = .musicTrack
+                case 2:
+                    resultType = .movie
+                default:
+                    resultType = .software
+                }
+        searchResultsController.performSearch(searchTerm: searchTerm, resultType: resultType) {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+
+        
+        
+    }
 }

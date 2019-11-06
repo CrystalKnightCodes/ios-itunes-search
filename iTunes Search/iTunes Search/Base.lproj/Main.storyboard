@@ -18,19 +18,19 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3AI-nI-gld">
-                                    <rect key="frame" x="20.5" y="13" width="373" height="74"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b89-Zd-Q5S">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <subviews>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kwU-WU-y8O">
-                                            <rect key="frame" x="92.5" y="0.0" width="188" height="32"/>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eEM-SV-civ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
                                             <segments>
-                                                <segment title="Apps"/>
-                                                <segment title="Music"/>
-                                                <segment title="Movies"/>
+                                                <segment title="First"/>
+                                                <segment title="Second"/>
+                                                <segment title="3rd"/>
                                             </segments>
                                         </segmentedControl>
-                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wQK-9v-Ujv">
-                                            <rect key="frame" x="0.0" y="31" width="373" height="43"/>
+                                        <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vvu-pb-HOF">
+                                            <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
                                     </subviews>
@@ -38,9 +38,10 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstItem="3AI-nI-gld" firstAttribute="centerX" secondItem="SEi-T6-VFY" secondAttribute="centerX" id="eJG-8N-Hmq"/>
-                                <constraint firstItem="3AI-nI-gld" firstAttribute="top" secondItem="SEi-T6-VFY" secondAttribute="topMargin" constant="5" id="gXi-IX-IVs"/>
-                                <constraint firstAttribute="bottomMargin" secondItem="3AI-nI-gld" secondAttribute="bottom" constant="5" id="qDw-lP-zKd"/>
+                                <constraint firstAttribute="bottom" secondItem="b89-Zd-Q5S" secondAttribute="bottom" id="1i1-VQ-ujP"/>
+                                <constraint firstAttribute="trailing" secondItem="b89-Zd-Q5S" secondAttribute="trailing" id="jKo-ma-khJ"/>
+                                <constraint firstItem="b89-Zd-Q5S" firstAttribute="top" secondItem="SEi-T6-VFY" secondAttribute="top" id="vnQ-1D-R5s"/>
+                                <constraint firstItem="b89-Zd-Q5S" firstAttribute="leading" secondItem="SEi-T6-VFY" secondAttribute="leading" id="yqO-ml-gJC"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -76,8 +77,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="iTunes Search" id="nFx-eT-Hkw"/>
                     <connections>
-                        <outlet property="resultTypeSegmentedControl" destination="kwU-WU-y8O" id="4WM-PS-9HM"/>
-                        <outlet property="searchBar" destination="wQK-9v-Ujv" id="1bx-vk-tjm"/>
+                        <outlet property="resultTypeSegmentedControl" destination="eEM-SV-civ" id="8R0-jI-q0J"/>
+                        <outlet property="searchBar" destination="vvu-pb-HOF" id="Aiz-7L-Ljd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLr-iJ-d9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
