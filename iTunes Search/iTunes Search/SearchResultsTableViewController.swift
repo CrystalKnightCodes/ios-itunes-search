@@ -108,7 +108,9 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
                 default:
                     resultType = .software
                 }
-        searchResultsController.performSearch(searchTerm: searchTerm, resultType: resultType) {
+        
+        
+        searchResultsController.performSearch(searchTerm: searchTerm, resultType: resultType) { 
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
