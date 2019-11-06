@@ -16,6 +16,7 @@
 		BA23F254237236D9001AD26C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F253237236D9001AD26C /* SearchResult.swift */; };
 		BA23F25623723905001AD26C /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F25523723905001AD26C /* ResultType.swift */; };
 		BA23F25823723AED001AD26C /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F25723723AED001AD26C /* SearchResultController.swift */; };
+		BA23F25A23724DC9001AD26C /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F25923724DC9001AD26C /* SearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BA23F253237236D9001AD26C /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		BA23F25523723905001AD26C /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		BA23F25723723AED001AD26C /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		BA23F25923724DC9001AD26C /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				BA23F241236FC997001AD26C /* SceneDelegate.swift */,
 				BA23F243236FC997001AD26C /* ViewController.swift */,
 				BA23F245236FC997001AD26C /* Main.storyboard */,
+				BA23F25923724DC9001AD26C /* SearchResultsTableViewController.swift */,
 				BA23F248236FC998001AD26C /* Assets.xcassets */,
 				BA23F24A236FC998001AD26C /* LaunchScreen.storyboard */,
 				BA23F24D236FC998001AD26C /* Info.plist */,
@@ -152,6 +155,7 @@
 				BA23F244236FC997001AD26C /* ViewController.swift in Sources */,
 				BA23F240236FC997001AD26C /* AppDelegate.swift in Sources */,
 				BA23F254237236D9001AD26C /* SearchResult.swift in Sources */,
+				BA23F25A23724DC9001AD26C /* SearchResultsTableViewController.swift in Sources */,
 				BA23F242236FC997001AD26C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
