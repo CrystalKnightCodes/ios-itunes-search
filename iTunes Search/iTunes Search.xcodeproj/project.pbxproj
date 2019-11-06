@@ -15,6 +15,7 @@
 		BA23F24C236FC998001AD26C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23F24A236FC998001AD26C /* LaunchScreen.storyboard */; };
 		BA23F254237236D9001AD26C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F253237236D9001AD26C /* SearchResult.swift */; };
 		BA23F25623723905001AD26C /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F25523723905001AD26C /* ResultType.swift */; };
+		BA23F25823723AED001AD26C /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F25723723AED001AD26C /* SearchResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BA23F24D236FC998001AD26C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA23F253237236D9001AD26C /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		BA23F25523723905001AD26C /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
+		BA23F25723723AED001AD26C /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				BA23F24D236FC998001AD26C /* Info.plist */,
 				BA23F253237236D9001AD26C /* SearchResult.swift */,
 				BA23F25523723905001AD26C /* ResultType.swift */,
+				BA23F25723723AED001AD26C /* SearchResultController.swift */,
 			);
 			path = "iTunes Search";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA23F25823723AED001AD26C /* SearchResultController.swift in Sources */,
 				BA23F25623723905001AD26C /* ResultType.swift in Sources */,
 				BA23F244236FC997001AD26C /* ViewController.swift in Sources */,
 				BA23F240236FC997001AD26C /* AppDelegate.swift in Sources */,
